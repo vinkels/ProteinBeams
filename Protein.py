@@ -8,7 +8,6 @@ class Protein2D:
         self.protein = protein
         self.start_pos = len(self.protein) - 1
         self.coors = self.init_protein()
-        # self.cur_score = 
 
     def init_protein(self):
 
@@ -29,25 +28,6 @@ class Protein2D:
         plt.plot(x, y, color='black',zorder=1)
         plt.axis('off')
         plt.show()
-
-    
-    def check_coor(self, coors, direction):
-
-        old_coor = coors[-1]
-        directions = [(old_coor[0] - 1, old_coor[1]), (old_coor[0] + 1, old_coor[1]), 
-                      (old_coor[0], old_coor[1] + 1), (old_coor[0], old_coor[1] - 1)]
-
-        if directions[direction] not in coors:
-            return directions[direction]
-        return False
-
-    def update_score(self, coors, protein):
-
-        score = 0
-        for i, coor in enumerate(coors[:-3]):
-            if abs(coor[0] - coors[-1][0]) + abs(coor[1] - coors[-1][1]) == 1 and protein[i] == 'H':
-                score += 1
-        return score
 
     def get_score(self, coors, protein):
         
