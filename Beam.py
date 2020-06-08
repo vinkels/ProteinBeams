@@ -28,10 +28,11 @@ class Beam2D:
             children, c_scores = self.make_children(parent, scores[i], protein)
             candidates += children
             candi_scores += c_scores
-        
+        # print(candidates)
         score_sorted, candi_sorted = zip(*sorted(zip(candi_scores, candidates),reverse=True))
         # print(candi_sorted[0], score_sorted[0])
         # print(score)
+        
         return candi_sorted, score_sorted
     
 
