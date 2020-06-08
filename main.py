@@ -27,12 +27,6 @@ def main():
                 for result in finals:
                     writer.writerow(result)
         
-
-            # protein = p.Protein2D(protein)
-            # bm = b.Beam2D()
-    # with open('results/')
-        # protein_dict[int(hp.split('_')[1])] = [protein.strip('\n') for protein in open(protein_folder+hp, 'r')]
-
             
 
 main()
