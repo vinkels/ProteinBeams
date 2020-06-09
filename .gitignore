@@ -4,7 +4,7 @@ __pycache__/
 *$py.class
 
 #input and results folders
-results/
+# results/
 proteins/
 
 # C extensions

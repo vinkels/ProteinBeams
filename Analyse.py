@@ -30,12 +30,13 @@ class Analyse():
         for length in df['length'].unique():
             cur_df = df[df['length'] == length]
 
-            # df_max = df[df['length'] == 100]
+            
             # print(df_max)
             plt.figure()
-            sns.boxplot(y=cur_df['score'], x=cur_df['beam_size']).set_title(f'scores for beamsize 20, 50 and 100 for proteins of length {length}')
+            sns.boxplot(y=cur_df['score'], x=cur_df['beam_size']).set_title(f'scores for different beam sizes for proteins of length {length}')
             plt.savefig(f'plots/l{length}_scores_beamsize.png')
 
+        df_max = df[df['length'] == 100]
         # sns.set()
         # sns.pointplot(data=df_max, x='beam_size', y='score', hue='length', dodge=True,
 	    #   capsize=.1, errwidth=1, palette='colorblind')
